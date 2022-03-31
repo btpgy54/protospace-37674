@@ -2,7 +2,7 @@ class Comment < ApplicationRecord
   belongs_to :prototype
   belongs_to :user
 
-  validate :text
+  validates :text, presence: true
   validate :prototype
   validate :user
 end
